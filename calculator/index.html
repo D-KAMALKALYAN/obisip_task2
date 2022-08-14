@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/calculator/style.css">
+    <title>My_Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="screen">
+            <button onclick="clearscreen()">CL</button>
+            <button onclick="del()">DEL</button>
+            <button onclick="isclicked('%')">%</button>
+            <button onclick="isclicked('/')">/</button>
+            <button onclick="isclicked('7')">7</button>
+            <button onclick="isclicked('8')">8</button>
+            <button onclick="isclicked('9')">9</button>
+            <button onclick="isclicked('*')">*</button>
+            <button onclick="isclicked('4')">4</button>
+            <button onclick="isclicked('5')">5</button>
+            <button onclick="isclicked('6')">6</button>
+            <button onclick="isclicked('-')">-</button>
+            <button onclick="isclicked('1')">1</button>
+            <button onclick="isclicked('2')">2</button>
+            <button onclick="isclicked('3')">3</button>
+            <button onclick="isclicked('+')">+</button>
+            <button onclick="isclicked('.')">.</button>
+            <button onclick="isclicked('0')">0</button>
+            <button onclick="calculate('=')" class="equal">=</button>
+        </div>
+    </div>
+    <script>
+        let out = document.getElementById("screen");
+        function isclicked(num){
+            out.value += num;
+        //     if(out.value === 0) {
+        //     out.value = value;
+        //     } 
+        //     else {
+        //     out.value += value;
+        // }
+        // // return out.value;
+        }
+        function clearscreen(){
+            out.value ="";
+        }
+        function del(){
+            out.value = out.value.slice(0,-1);
+        }
+        function calculate(){
+            try{
+                out.value = eval(out.value)
+            }
+            catch{
+                alert("Invalid input")
+            }
+        }
+    </script>
+</body>
+</html>

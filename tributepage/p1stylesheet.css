@@ -1,0 +1,41 @@
+*{
+  margin:0 ;
+  box-sizing: border-box;
+  /* background: #ecf0f3; */
+  /* overflow: hidden; */
+
+}
+.wrapper{
+  background-color: powderblue;
+  /* margin: 25px 25px 25px 25px; */
+  border-radius: 5px;
+  padding: 10px;
+}
+.title{
+  text-align : center;
+}
+.text
+{
+  border: 1px solid grey;
+  padding: 5px;
+
+}
+.pic{
+  text-align: center;
+
+}
+.content{
+  margin: 0 0 10px 30px;
+}
+.matter
+{
+ font-size: 1.2rem;
+ margin: 10px 5px 5px 70px;
+
+}
+.link
+{
+  font-size: 1rem;
+  text-align: center;
+  margin: 20px 20px 20px 20px ;
+}
